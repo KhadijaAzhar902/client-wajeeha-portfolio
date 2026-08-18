@@ -3544,3 +3544,970 @@ body.cursor-active
   color: var(--ink, #171310);
   transform: translateY(-1px);
 }
+
+/* =========================================================
+   FINAL MOBILE POLISH
+   CLIENT DIRECTION: LESS IS MORE / CLEAR / PHONE FIRST
+========================================================= */
+
+@media (max-width: 680px) {
+
+  /* ---------------------------------------------------------
+     GLOBAL
+  --------------------------------------------------------- */
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  :root {
+    --container: calc(100% - 32px);
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+
+  /* ---------------------------------------------------------
+     NAVIGATION
+  --------------------------------------------------------- */
+
+  .nav-shell {
+    min-height: 68px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .brand {
+    font-size: 13px;
+    letter-spacing: .09em;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+  }
+
+  .nav-links {
+    top: 68px;
+    left: 16px;
+    right: 16px;
+    padding: 8px 16px;
+  }
+
+  .nav-links a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+
+  /* ---------------------------------------------------------
+     HERO
+  --------------------------------------------------------- */
+
+  .hero {
+    min-height: auto;
+    padding: 104px 0 72px;
+    align-items: flex-start;
+  }
+
+  .hero-grid {
+    gap: 52px;
+  }
+
+  .hero-copy {
+    width: 100%;
+  }
+
+  .hero .eyebrow {
+    font-size: 8.5px;
+    line-height: 1.7;
+    letter-spacing: .12em;
+    gap: 10px;
+  }
+
+  .hero .eyebrow span {
+    width: 26px;
+    flex: 0 0 26px;
+  }
+
+
+  /* WAJEEHA — keep safely inside phone screen */
+
+  .hero-name {
+    margin-top: 20px;
+    line-height: .82;
+  }
+
+  .name-main {
+    font-size: clamp(56px, 17vw, 72px);
+    letter-spacing: -.055em;
+  }
+
+  .name-script {
+    font-size: clamp(58px, 18vw, 76px);
+    margin-left: 12px;
+    margin-top: 5px;
+    letter-spacing: -.04em;
+  }
+
+
+  /* Hero statement */
+
+  .hero-statement {
+    margin-top: 30px;
+  }
+
+  .hero-statement p {
+    font-size: clamp(28px, 8.5vw, 34px);
+    line-height: 1.08;
+  }
+
+
+  /* Hero paragraph */
+
+  .hero-intro {
+    margin-top: 22px;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.67);
+  }
+
+
+  /* Buttons */
+
+  .hero-actions {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 18px;
+    font-size: 10px;
+    letter-spacing: .09em;
+  }
+
+  .btn-primary {
+    justify-content: space-between;
+  }
+
+  .btn-arrow {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 16px;
+    line-height: 1;
+    color: var(--espresso);
+  }
+
+
+  /* Status */
+
+  .status-strip {
+    margin-top: 34px;
+    padding-top: 16px;
+    gap: 0;
+  }
+
+  .status-strip div {
+    grid-template-columns: 112px 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+
+  .status-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .status-strip span {
+    font-size: 8px;
+  }
+
+  .status-strip strong {
+    font-size: 10px;
+  }
+
+
+  /* ---------------------------------------------------------
+     PORTRAIT
+  --------------------------------------------------------- */
+
+  .portrait-stage {
+    width: min(86vw, 350px);
+    justify-self: center;
+    margin-top: 4px;
+    transform: none;
+  }
+
+  .portrait-card {
+    width: 100%;
+  }
+
+  .portrait-frame-one {
+    inset: 3% 3% 3% 0;
+    transform: translate(-2px,-2px);
+    animation: none;
+  }
+
+  .portrait-frame-two {
+    inset: 6% 0 1% 6%;
+    transform: translate(2px,2px);
+    animation: none;
+  }
+
+  .portrait-halo {
+    left: 12%;
+    right: 12%;
+    top: -3%;
+    animation: none;
+  }
+
+  .portrait-light {
+    opacity: .18;
+  }
+
+  .portrait-editorial-meta {
+    margin-top: 14px;
+    gap: 4px;
+    font-size: 7px;
+  }
+
+  /* less is more on phone */
+  .portrait-caption {
+    display: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     GENERAL SECTION HEADINGS
+  --------------------------------------------------------- */
+
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 72px 0 34px;
+  }
+
+  .section-heading h2,
+  .process-intro h2,
+  .contact-copy h2,
+  .education-title h2 {
+    font-size: clamp(44px, 13vw, 60px);
+    line-height: .9;
+    letter-spacing: -.045em;
+  }
+
+  .section-heading > p {
+    margin: 0;
+    max-width: 100%;
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  .section-index {
+    font-size: 9px;
+  }
+
+
+  /* ---------------------------------------------------------
+     EXECUTIVE DESK
+  --------------------------------------------------------- */
+
+  .desk {
+    padding-bottom: 78px;
+  }
+
+  .capability-trigger {
+    grid-template-columns: 34px 1fr 22px;
+    gap: 10px;
+    padding: 20px 0;
+  }
+
+  .cap-number {
+    font-size: 9px;
+  }
+
+  .cap-title {
+    font-size: clamp(22px, 6.8vw, 28px);
+    line-height: 1.08;
+  }
+
+  .cap-tag {
+    grid-column: 2;
+    margin-top: -3px;
+    font-size: 17px;
+    line-height: 1.25;
+  }
+
+  .cap-plus {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    font-size: 23px;
+  }
+
+  .capability-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-left: 0;
+  }
+
+  .capability.is-open .capability-panel-inner {
+    padding-bottom: 28px;
+  }
+
+  .capability-panel p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .capability-panel ul {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .capability-panel li {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------------------------------------------------------
+     EXPERIENCE
+  --------------------------------------------------------- */
+
+  .experience {
+    padding-bottom: 82px;
+  }
+
+  .experience-stack {
+    margin-top: 34px;
+    gap: 16px;
+  }
+
+  .experience-card {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .experience-year,
+  .experience-copy {
+    grid-column: auto;
+  }
+
+  .experience-year {
+    font-size: 9px;
+  }
+
+  .experience-main h3 {
+    margin: 10px 0 14px;
+    font-size: clamp(40px, 12vw, 48px);
+    line-height: .94;
+  }
+
+  .experience-role {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .experience-copy > p {
+    font-size: 14px;
+    line-height: 1.72;
+    margin-bottom: 20px;
+  }
+
+  .experience-tags {
+    gap: 7px;
+  }
+
+  .experience-tags span {
+    padding: 7px 9px;
+    font-size: 7.5px;
+  }
+
+
+  /* ---------------------------------------------------------
+     HOW I WORK
+  --------------------------------------------------------- */
+
+  .process {
+    padding: 82px 0;
+  }
+
+  .process-grid {
+    gap: 42px;
+  }
+
+  .process-intro p {
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  .process-note {
+    margin-top: 22px;
+  }
+
+  .motion-track {
+    padding-left: 38px;
+  }
+
+  .motion-line {
+    left: 5px;
+  }
+
+  .motion-step {
+    grid-template-columns: 56px 1fr;
+    gap: 14px;
+    min-height: 132px;
+  }
+
+  .motion-step::before {
+    left: -37px;
+  }
+
+  .motion-time {
+    font-size: 8px;
+  }
+
+  .motion-step h3 {
+    font-size: clamp(27px, 8vw, 34px);
+    margin-bottom: 6px;
+  }
+
+  .motion-step p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+
+  /* =========================================================
+     TOOLS — IMPORTANT MOBILE REBUILD
+
+     On phone we stop using absolute overlay scenes.
+     Only the selected scene exists in the document flow.
+     This permanently fixes clipped 01 / 02 / 03 / 04 labels.
+  ========================================================= */
+
+  .tools {
+    padding-bottom: 76px;
+  }
+
+  .tool-workbench {
+    margin-top: 30px;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    overflow: hidden;
+  }
+
+
+  /* Tabs */
+
+  .tool-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+
+  .tool-tab {
+    min-height: 68px;
+    padding: 14px 12px;
+
+    display: grid;
+    grid-template-columns: 24px 1fr;
+
+    align-items: center;
+    align-content: center;
+
+    gap: 4px 8px;
+
+    border-right: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .tool-tab:nth-child(even) {
+    border-right: 0;
+  }
+
+  .tool-tab span {
+    grid-row: auto;
+    font-size: 8px;
+  }
+
+  .tool-tab strong {
+    font-size: 11px;
+    letter-spacing: .055em;
+  }
+
+  .tool-tab small {
+    display: none;
+  }
+
+  .tool-tab:hover,
+  .tool-tab.is-active {
+    padding-left: 12px;
+  }
+
+
+  /* Active scene only */
+
+  .tool-stage {
+    position: relative;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .tool-scene {
+    position: relative;
+    inset: auto;
+
+    display: none;
+
+    grid-template-columns: 1fr;
+    align-items: initial;
+    align-content: initial;
+
+    gap: 26px;
+
+    padding: 30px 18px 22px;
+
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .tool-scene.is-active {
+    display: grid;
+    opacity: 1;
+    transform: none;
+  }
+
+
+  /* 01 / OUTLOOK etc — NEVER CLIPPED */
+
+  .tool-scene-copy {
+    padding: 0;
+  }
+
+  .tool-scene-copy > span {
+    display: block;
+    margin: 0 0 14px;
+
+    font-size: 9px;
+    line-height: 1.4;
+    letter-spacing: .14em;
+
+    color: var(--champagne);
+  }
+
+
+  /* Tool headings */
+
+  .tool-scene-copy h3 {
+    margin: 0 0 18px;
+
+    font-size: clamp(38px, 11.5vw, 50px);
+    line-height: .95;
+    letter-spacing: -.045em;
+  }
+
+  .tool-scene-copy h3 em {
+    margin-top: 2px;
+  }
+
+
+  /* Tool paragraphs */
+
+  .tool-scene-copy p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,.64);
+  }
+
+
+  /* Tags */
+
+  .scene-tags {
+    margin-top: 22px;
+    gap: 7px;
+  }
+
+  .scene-tags i {
+    padding: 7px 8px;
+    font-size: 7px;
+    letter-spacing: .1em;
+  }
+
+
+  /* Fake Office visual */
+
+  .office-window {
+    margin-top: 0;
+    padding: 12px;
+    box-shadow: none;
+  }
+
+  .window-bar {
+    padding-bottom: 11px;
+  }
+
+  .window-bar i {
+    width: 5px;
+    height: 5px;
+  }
+
+  .window-bar span {
+    font-size: 6.5px;
+  }
+
+
+  /* Outlook */
+
+  .outlook-demo {
+    grid-template-columns: .58fr 1.42fr;
+    gap: 9px;
+    padding-top: 15px;
+  }
+
+  .fake-inbox {
+    gap: 6px;
+  }
+
+  .fake-inbox span {
+    height: 28px;
+  }
+
+  .fake-calendar b {
+    font-size: 6px;
+  }
+
+  .fake-calendar > div {
+    gap: 4px;
+  }
+
+  .fake-calendar span {
+    height: 34px;
+  }
+
+
+  /* Excel */
+
+  .sheet-demo {
+    gap: 4px;
+    padding-top: 16px;
+  }
+
+  .sheet-demo span {
+    height: 36px;
+  }
+
+
+  /* Word */
+
+  .document-demo {
+    min-height: 210px;
+    padding: 28px 20px 20px;
+  }
+
+  .document-demo strong {
+    margin-bottom: 22px;
+  }
+
+  .document-demo span {
+    margin-bottom: 13px;
+  }
+
+
+  /* PowerPoint */
+
+  .slides-demo {
+    padding: 42px 8px;
+    gap: 8px;
+  }
+
+  .tool-scene.is-active
+  .slides-demo .current {
+    transform: translateY(-7px) scale(1.04);
+  }
+
+
+  /* ---------------------------------------------------------
+     CREDENTIALS
+  --------------------------------------------------------- */
+
+  .credentials {
+    padding-bottom: 78px;
+  }
+
+  .credential {
+    grid-template-columns: 30px 1fr;
+    gap: 12px;
+    min-height: 0;
+    padding: 22px 0;
+  }
+
+  .credential > span {
+    font-size: 9px;
+  }
+
+  .credential h3 {
+    font-size: clamp(22px, 6.6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .credential p {
+    grid-column: 2;
+    justify-self: start;
+    font-size: 18px;
+    margin-top: 3px;
+  }
+
+
+  /* ---------------------------------------------------------
+     EDUCATION
+  --------------------------------------------------------- */
+
+  .education {
+    padding-bottom: 78px;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding-top: 76px;
+  }
+
+
+  /* Moving words remain visible but become background only */
+
+  .education-marquee {
+    top: 52%;
+    opacity: .7;
+  }
+
+  .education-marquee::before,
+  .education-marquee::after {
+    width: 18vw;
+  }
+
+  .education-marquee-track {
+    animation-duration: 42s;
+  }
+
+  .education-marquee-track span {
+    padding-right: 36px;
+
+    font-size: clamp(58px, 18vw, 76px);
+
+    color: rgba(124,98,68,.065);
+  }
+
+
+  .education-title h2 {
+    font-size: clamp(46px, 13vw, 58px);
+  }
+
+  .education-card {
+    padding: 22px 0 22px 20px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(243,238,230,.95),
+        rgba(243,238,230,.78),
+        rgba(243,238,230,.3)
+      );
+  }
+
+  .education-year {
+    font-size: 8px;
+  }
+
+  .education-card h3 {
+    margin: 18px 0 14px;
+
+    font-size: clamp(32px, 9vw, 42px);
+    line-height: 1;
+  }
+
+  .education-card p {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .education-card small {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+  }
+
+
+  /* ---------------------------------------------------------
+     CONTACT
+  --------------------------------------------------------- */
+
+  .contact {
+    padding: 82px 0 26px;
+  }
+
+  .contact-grid {
+    gap: 48px;
+  }
+
+  .contact-copy p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .contact-status {
+    margin-top: 24px;
+    gap: 7px;
+  }
+
+  .contact-status span {
+    padding: 8px 9px;
+    font-size: 7.5px;
+  }
+
+
+  /* Cleaner contact links */
+
+  .contact-link {
+    min-height: 84px;
+
+    grid-template-columns:
+      minmax(0,1fr)
+      auto;
+
+    grid-template-rows:
+      auto auto;
+
+    gap: 5px 12px;
+
+    padding: 16px 0;
+  }
+
+  .contact-link span {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    font-size: 8px;
+  }
+
+  .contact-link strong {
+    grid-column: 1;
+    grid-row: 2;
+
+    min-width: 0;
+
+    font-size: clamp(15px, 4.5vw, 18px);
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-link i {
+    grid-column: 2;
+    grid-row: 2;
+
+    align-self: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     FOOTER
+  --------------------------------------------------------- */
+
+  .footer {
+    margin-top: 68px;
+    padding-top: 20px;
+
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE MOTION — KEEP IT CALM
+  --------------------------------------------------------- */
+
+  .portrait-halo,
+  .portrait-frame-one,
+  .portrait-frame-two {
+    animation: none;
+  }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  :root {
+    --container: calc(100% - 26px);
+  }
+
+  .name-main {
+    font-size: 54px;
+  }
+
+  .name-script {
+    font-size: 57px;
+    margin-left: 8px;
+  }
+
+  .hero-statement p {
+    font-size: 27px;
+  }
+
+  .section-heading h2,
+  .process-intro h2,
+  .contact-copy h2,
+  .education-title h2 {
+    font-size: 43px;
+  }
+
+  .tool-tab {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .tool-tab:hover,
+  .tool-tab.is-active {
+    padding-left: 9px;
+  }
+
+  .tool-tab strong {
+    font-size: 10px;
+  }
+
+  .tool-scene {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}
