@@ -3472,3 +3472,71 @@ body.cursor-active
   }
 
 }
+
+/* ========================================
+   MOBILE FIXES
+======================================== */
+@media (max-width: 768px) {
+
+  /* TOOLS SECTION */
+  .tool-workbench {
+    gap: 18px;
+  }
+
+  .tool-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 18px;
+  }
+
+  .tool-tab {
+    min-height: 82px;
+    padding: 18px 16px;
+  }
+
+  .tool-stage {
+    margin-top: 8px;
+  }
+
+  .tool-scene {
+    padding-top: 12px;
+  }
+
+  .tool-scene-copy {
+    padding: 0 14px 10px;
+  }
+
+  .tool-scene-copy h3 {
+    font-size: clamp(42px, 11vw, 64px);
+    line-height: 0.95;
+  }
+
+  .tool-scene-copy p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .scene-tags {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .office-window {
+    margin-top: 18px;
+  }
+}
+
+/* Minimal button arrow */
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--ink, #171310);
+  transform: translateY(-1px);
+}
