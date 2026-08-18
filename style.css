@@ -3474,11 +3474,10 @@ body.cursor-active
 }
 
 /* ========================================
-   MOBILE FIXES
+   MOBILE TOOLS SECTION FIX
 ======================================== */
 @media (max-width: 768px) {
 
-  /* TOOLS SECTION */
   .tool-workbench {
     gap: 18px;
   }
@@ -3495,16 +3494,21 @@ body.cursor-active
     padding: 18px 16px;
   }
 
-  .tool-stage {
-    margin-top: 8px;
-  }
-
+  /* this is the important fix */
   .tool-scene {
-    padding-top: 12px;
+    padding-top: 26px;
   }
 
   .tool-scene-copy {
-    padding: 0 14px 10px;
+    padding: 24px 14px 10px;
+  }
+
+  .tool-scene-copy > span {
+    display: block;
+    margin-bottom: 18px;
+    line-height: 1.2;
+    font-size: 11px;
+    letter-spacing: 0.16em;
   }
 
   .tool-scene-copy h3 {
