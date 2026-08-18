@@ -4511,3 +4511,118 @@ body.cursor-active
   }
 
 }
+
+/* =========================================================
+   FINAL FIX — MOBILE TOOL SCENE CLIPPING
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .tool-workbench {
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .tool-stage {
+    position: relative !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* Hide inactive scenes completely */
+
+  .tool-scene {
+    position: relative !important;
+
+    inset: auto !important;
+
+    display: none !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    grid-template-columns: 1fr !important;
+
+    align-items: start !important;
+    align-content: start !important;
+
+    padding: 34px 18px 26px !important;
+
+    gap: 28px !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* Show ONLY selected tool */
+
+  .tool-scene.is-active {
+    display: grid !important;
+  }
+
+
+  /* Never crop the copy */
+
+  .tool-scene-copy {
+    position: relative !important;
+
+    padding: 0 !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* 01 / OUTLOOK, 02 / EXCEL etc */
+
+  .tool-scene-copy > span {
+    display: block !important;
+
+    position: relative !important;
+
+    margin: 0 0 16px !important;
+
+    padding: 2px 0 !important;
+
+    height: auto !important;
+
+    line-height: 1.5 !important;
+
+    font-size: 9px !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* Tool title */
+
+  .tool-scene-copy h3 {
+    margin: 0 0 20px !important;
+
+    padding: 2px 0 4px !important;
+
+    line-height: .98 !important;
+
+    overflow: visible !important;
+  }
+
+
+  .tool-scene-copy p {
+    margin: 0 !important;
+  }
+
+
+  .office-window {
+    margin-top: 0 !important;
+  }
+
+}
