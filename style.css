@@ -4626,3 +4626,20 @@ body.cursor-active
   }
 
 }
+
+@media (max-width: 380px) {
+
+  .name-main {
+    font-size: 51px;
+  }
+
+  .name-script {
+    font-size: 55px;
+  }
+
+  .hero .eyebrow {
+    font-size: 8px;
+    letter-spacing: .1em;
+  }
+
+}
