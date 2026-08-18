@@ -4645,39 +4645,39 @@ body.cursor-active
 }
 
 /* =========================================================
-   CUSTOM EDITORIAL ARROWS
-   Prevents iPhone emoji arrows
+   FINAL CSS-ONLY ARROWS
+   NO EMOJI / NO ICON FONT
 ========================================================= */
 
-
 /* ---------------------------------------------------------
-   EXPLORE PROFILE ARROW
+   EXPLORE PROFILE
 --------------------------------------------------------- */
 
-.btn-arrow {
+.btn-primary > span {
   position: relative;
+
+  display: inline-block;
 
   width: 18px;
   height: 18px;
 
-  display: inline-block;
-
   margin-left: auto;
 
   font-size: 0 !important;
+  line-height: 0 !important;
 
   flex: 0 0 18px;
 }
 
 
-/* arrow line */
+/* diagonal stem */
 
-.btn-arrow::before {
+.btn-primary > span::before {
   content: "";
 
   position: absolute;
 
-  width: 12px;
+  width: 13px;
   height: 1px;
 
   left: 2px;
@@ -4686,14 +4686,12 @@ body.cursor-active
   background: #171310;
 
   transform: rotate(-45deg);
-
-  transform-origin: center;
 }
 
 
 /* arrow head */
 
-.btn-arrow::after {
+.btn-primary > span::after {
   content: "";
 
   position: absolute;
@@ -4709,26 +4707,27 @@ body.cursor-active
 }
 
 
+
 /* ---------------------------------------------------------
-   CONTACT LINK ARROWS
-   Email / Phone / LinkedIn / CV
+   EMAIL / PHONE / LINKEDIN / CV
 --------------------------------------------------------- */
 
 .contact-link i {
-  position: relative;
+  position: relative !important;
 
-  width: 20px;
-  height: 20px;
+  display: block !important;
 
-  display: inline-block;
+  width: 18px !important;
+  height: 18px !important;
 
   font-size: 0 !important;
+  line-height: 0 !important;
 
-  flex: 0 0 20px;
+  color: transparent !important;
 }
 
 
-/* diagonal line */
+/* diagonal stem */
 
 .contact-link i::before {
   content: "";
@@ -4738,18 +4737,15 @@ body.cursor-active
   width: 12px;
   height: 1px;
 
-  left: 3px;
-  top: 10px;
+  left: 2px;
+  top: 9px;
 
   background: var(--champagne);
 
   transform: rotate(-45deg);
 
-  transform-origin: center;
-
   transition:
-    transform .3s var(--ease),
-    background .3s ease;
+    transform .3s ease;
 }
 
 
@@ -4763,19 +4759,18 @@ body.cursor-active
   width: 6px;
   height: 6px;
 
-  right: 2px;
-  top: 3px;
+  right: 1px;
+  top: 2px;
 
   border-top: 1px solid var(--champagne);
   border-right: 1px solid var(--champagne);
 
   transition:
-    transform .3s var(--ease),
-    border-color .3s ease;
+    transform .3s ease;
 }
 
 
-/* tiny elegant movement on hover */
+/* tiny elegant hover motion */
 
 .contact-link:hover i::before {
   transform:
@@ -4789,20 +4784,182 @@ body.cursor-active
 }
 
 
+
 /* ---------------------------------------------------------
-   MOBILE
+   MOBILE SIZE
 --------------------------------------------------------- */
 
 @media (max-width: 680px) {
 
-  .btn-arrow {
+  .btn-primary > span {
     width: 17px;
     height: 17px;
+    flex-basis: 17px;
   }
 
   .contact-link i {
-    width: 18px;
-    height: 18px;
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+}
+
+/* =========================================================
+   FINAL CSS-ONLY ARROWS
+   NO EMOJI / NO ICON FONT
+========================================================= */
+
+/* ---------------------------------------------------------
+   EXPLORE PROFILE
+--------------------------------------------------------- */
+
+.btn-primary > span {
+  position: relative;
+
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+
+  margin-left: auto;
+
+  font-size: 0 !important;
+  line-height: 0 !important;
+
+  flex: 0 0 18px;
+}
+
+
+/* diagonal stem */
+
+.btn-primary > span::before {
+  content: "";
+
+  position: absolute;
+
+  width: 13px;
+  height: 1px;
+
+  left: 2px;
+  top: 9px;
+
+  background: #171310;
+
+  transform: rotate(-45deg);
+}
+
+
+/* arrow head */
+
+.btn-primary > span::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  right: 1px;
+  top: 2px;
+
+  border-top: 1px solid #171310;
+  border-right: 1px solid #171310;
+}
+
+
+
+/* ---------------------------------------------------------
+   EMAIL / PHONE / LINKEDIN / CV
+--------------------------------------------------------- */
+
+.contact-link i {
+  position: relative !important;
+
+  display: block !important;
+
+  width: 18px !important;
+  height: 18px !important;
+
+  font-size: 0 !important;
+  line-height: 0 !important;
+
+  color: transparent !important;
+}
+
+
+/* diagonal stem */
+
+.contact-link i::before {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 1px;
+
+  left: 2px;
+  top: 9px;
+
+  background: var(--champagne);
+
+  transform: rotate(-45deg);
+
+  transition:
+    transform .3s ease;
+}
+
+
+/* arrow head */
+
+.contact-link i::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  right: 1px;
+  top: 2px;
+
+  border-top: 1px solid var(--champagne);
+  border-right: 1px solid var(--champagne);
+
+  transition:
+    transform .3s ease;
+}
+
+
+/* tiny elegant hover motion */
+
+.contact-link:hover i::before {
+  transform:
+    translate(2px, -2px)
+    rotate(-45deg);
+}
+
+.contact-link:hover i::after {
+  transform:
+    translate(2px, -2px);
+}
+
+
+
+/* ---------------------------------------------------------
+   MOBILE SIZE
+--------------------------------------------------------- */
+
+@media (max-width: 680px) {
+
+  .btn-primary > span {
+    width: 17px;
+    height: 17px;
+    flex-basis: 17px;
+  }
+
+  .contact-link i {
+    width: 17px !important;
+    height: 17px !important;
   }
 
 }
